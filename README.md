@@ -1,5 +1,5 @@
 # BoxIdea
-Project: Idea Box
+#Project: Idea Box
 Group Member Names:  Brian Tiedt
 Project Expectations: What does each group member hope to get out of this project?
 LL: Knowlede growth of JS/jQuery functionality and intersectionality
