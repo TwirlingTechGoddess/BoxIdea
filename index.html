@@ -16,7 +16,7 @@
   </header>
 
   <section class="inputs-button-main" action="index.html" method="post">
-    <form class="form-in">
+    <form class="from-inputs">
       <input class="input-title" type="text" placeholder="Title" name="Title" aria-label="input-title">
       <input class="input-body" type="text" placeholder="Body" name="Body" aria-label="input-body">
       <br>
@@ -27,16 +27,16 @@
   <main class="info-from-inputs">
     <input class="search-bar" type="search" placeholder="Search" name="Search" aria-label="search-bar">
     <article>
-      <h2>Example Idea 1</h2>
+      <h2 class="output-title">Example Idea 1</h2>
         <button class="delete-button"></button>
         <br>
-        <p>Tiramisu carrot cake fruitcake gingerbread bear claw powder icing tootsie roll ice cream.</p>
+        <p class="output-body">Tiramisu carrot cake fruitcake gingerbread bear claw powder icing tootsie roll ice cream.</p>
         <form>
           <button class="upvote-button"></button>
           <button class="downvote-button"></button>
           <h3>quality:</h3>
           <select class="quality-selector" name="quality">
-            <option value="swill" selected>swill</option> 
+            <option value="swill" selected>swill</option>
             <option value="plausible">plausible</option>
             <option value="genius">genius</option>
         </form>
@@ -45,5 +45,7 @@
     </article>
   </main>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
 </body>
 </html>
