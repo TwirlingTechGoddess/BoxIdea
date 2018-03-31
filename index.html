@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <link rel="icon" type="icon/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Light-Bulb_icon_by_Till_Teenck_green.svg/2000px-Light-Bulb_icon_by_Till_Teenck_green.svg.png">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:700" rel="stylesheet">
   <title>Great Idea Box</title>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
 </head>
 <body>
-  <!-- Title inputs and button -->
+
   <header class="main-header">
-    <h1>ideabox</h1>
-    <form class="inputs-button-main" action="index.html" method="post">
-      <input type="text" placeholder="Title">
-      <input type="text" placeholder="Body" name="" value="">
-      <button type="button" name="save">Save</button>
-    </form>
+    <h1>idea<span>box</span></h1>
   </header>
-  <!-- Idea area  -->
-    <section class="info-from-inputs">
-      <!-- provided title and body should appear in the idea list -->
-    </section>
+
+  <section class="inputs-button-main" action="index.html" method="post">
+    <form class="form-in">
+      <input class="input-title" type="text" placeholder="Title" name="Title" aria-label="input-title">
+      <input class="input-body" type="text" placeholder="Body" name="Body" aria-label="input-body">
+      <br>
+      <button class="submit-button" type="button" name="save">save</button>
+    </form>
+  </section>
+
+  <main class="info-from-inputs">
+    <input class="search-bar" type="search" placeholder="Search" name="Search" aria-label="search-bar">
+    <article>
+      <h2>Example Idea 1</h2>
+        <button class="delete-button"></button>
+        <br>
+        <p>Tiramisu carrot cake fruitcake gingerbread bear claw powder icing tootsie roll ice cream.</p>
+        <form>
+          <button class="upvote-button"></button>
+          <button class="downvote-button"></button>
+          <h3>quality:</h3>
+          <select class="quality-selector" name="quality">
+            <option value="swill" selected>swill</option> 
+            <option value="plausible">plausible</option>
+            <option value="genius">genius</option>
+        </form>
+        </select>
+
+    </article>
+  </main>
 
 </body>
 </html>

@@ -1,0 +1,137 @@
+/*-------full page settings-------*/
+body {
+  font-family: 'open sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+/*-----------input section---------*/
+section {
+  position: relative;
+  height: 37.5vh;
+  width: 100%;
+  background-color: #E5F3F2;
+  text-align: center;
+  padding: 5rem 0 0 0;
+}
+
+h1 {
+  position: fixed;
+  font-family: 'Roboto Slab', serif;
+  height: 5rem;
+  width: 100%;
+  background-color: transparent;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #00A79D;
+  padding-top: 2.5rem;
+  z-index: 2;
+}
+
+span {
+  color: grey;
+}
+
+form {
+  margin-top: 3rem;
+}
+
+input {
+  height: 2.75rem;
+  width: 60%;
+  border: .132rem solid lightgrey;
+  font-size: xx-large;
+  margin: 1rem 0 .5rem 0;
+  padding-left: 1rem;
+}
+
+input::placeholder {
+  color: lightgrey;
+}
+
+.submit-button {
+  position: relative;
+  height: 3rem;
+  width: 62%;
+  border: none;
+  background-color: #00A79D;
+  color: #fff;
+  font-size: x-large;
+  margin: 1rem auto;
+}
+
+/*----------card append section-------*/
+main {
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  overflow: scroll;
+}
+
+.search-bar {
+  width: 62%;
+  margin: 1.5rem 0;
+}
+
+/*-----------idea cards-----------*/
+article {
+  height: 10rem;
+  width: 62%;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  border-bottom: .125rem solid lightgrey;
+}
+
+h2 {
+  float: left;
+  font-family: 'Roboto Slab', serif;
+  font-size: x-large;
+}
+
+article button {
+  height: 2rem;
+  width: 2rem;
+  border: none;
+}
+
+p {
+  padding-top: 1rem;
+}
+
+.delete-button {
+  float: right;
+  background-image: url('images/delete.svg');
+}
+
+.upvote-button {
+  float: left;
+  background-image: url('images/upvote.svg');
+  margin-right: 2rem;
+}
+
+.downvote-button {
+  float: left;
+  background-image: url('images/downvote.svg');
+  margin-right: 2rem;
+}
+
+h3 {
+  float: left;
+  font-family: 'Roboto Slab', serif;
+  font-size: large;
+  padding: .5rem 0 0 0;
+}
+
+select {
+  float: left;
+  border: none;
+  background-color: transparent;
+  -moz-appearance: none;
+  -webkit-appearance:none;
+  font-size: large;
+  padding: .5rem 0 0 .5rem;
+}
+
+select::-ms-expand {
+    display: none;
+}
