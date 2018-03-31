@@ -1,9 +1,9 @@
 # BoxIdea
-#Project: Idea Box
-Group Member Names:  Brian Tiedt
-Project Expectations: What does each group member hope to get out of this project?
-LL: Knowlede growth of JS/jQuery functionality and intersectionality
-BT: More working knowledge of jQuery
+### Project: Idea Box
+# Group Member Names:  Brian Tiedt
+## Project Expectations: What does each group member hope to get out of this project?
+* LL: Knowlede growth of JS/jQuery functionality and intersectionality
+* BT: More working knowledge of jQuery
 Goals and expectations:
 LL: I’m open to working through as much of the project together as possible
 BT: Work daily, no expectations to finish, but complete as much work as possible
