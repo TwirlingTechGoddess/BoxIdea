@@ -75,17 +75,19 @@ main {
 
 /*-----------idea cards-----------*/
 article {
-  height: 10rem;
+  position: relative;
+  height: 12rem;
   width: 62%;
   margin: 1.5rem auto;
-  padding: 1rem;
+  padding-bottom: .2rem;
   border-bottom: .125rem solid lightgrey;
 }
 
 h2 {
   float: left;
   font-family: 'Roboto Slab', serif;
-  font-size: x-large;
+  font-size: xx-large;
+  color: #6D6E71;
 }
 
 article button {
@@ -95,7 +97,13 @@ article button {
 }
 
 p {
-  padding-top: 1rem;
+  width: 90%;
+  text-align: left;
+  font-size: x-large;
+  line-height: 1.5rem;
+  color: #939598;
+  padding: .75rem 0;
+  overflow: scroll;
 }
 
 .delete-button {
@@ -106,19 +114,20 @@ p {
 .upvote-button {
   float: left;
   background-image: url('images/upvote.svg');
-  margin-right: 2rem;
+  margin-right: 1.5rem;
 }
 
 .downvote-button {
   float: left;
   background-image: url('images/downvote.svg');
-  margin-right: 2rem;
+  margin-right: 1.5rem;
 }
 
 h3 {
   float: left;
   font-family: 'Roboto Slab', serif;
-  font-size: large;
+  font-size: large;  
+  color: #6D6E71;
   padding: .5rem 0 0 0;
 }
 
@@ -129,6 +138,7 @@ select {
   -moz-appearance: none;
   -webkit-appearance:none;
   font-size: large;
+  color: #6D6E71;
   padding: .5rem 0 0 .5rem;
 }
 
