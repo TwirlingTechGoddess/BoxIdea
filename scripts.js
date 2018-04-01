@@ -5,12 +5,9 @@ var $submitButton = $(".submit-button");
 var $searchBar = $(".search-bar");
 
 
-
 $inputTitle.keyup(toggleButton);
 $inputBody.keyup(toggleButton);
 $submitButton.on('click', addItemToList);
-//**5 (pt.1of2-pt is #6 below)button toggle active/non (comment deletes and moves up)
-
 
 
 function toggleButton() {
@@ -25,7 +22,7 @@ function addItemToList(event) {
   event.preventDefault();
   var $ideaCardList = $('.info-from-inputs');
   $ideaCardList.prepend(`
-    <article>
+    <article id=${Date.now()}>
       <h2 class="output-title">${$inputTitle.val()}</h2>
         <button class="delete-button"></button>
         <br>
@@ -45,13 +42,6 @@ function addItemToList(event) {
   clearInputs();
   toggleButton();
 }
-
-
-
-
-
-
-
 
 
 function clearInputs() {
