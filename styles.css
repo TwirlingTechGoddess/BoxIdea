@@ -16,7 +16,7 @@ section {
 }
 
 h1 {
-  position: fixed;
+  position: absolute;
   font-family: 'Roboto Slab', serif;
   height: 5rem;
   width: 100%;

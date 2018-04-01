@@ -1,44 +1,61 @@
-var $searchBar = $(."search-bar");
 
-var $inputTitle = $(."input-title");
-var $inputBody = $(."input-body");
-var $submitButton = $(."submit-button");
+var $inputTitle = $(".input-title");
+var $inputBody = $(".input-body");
+var $submitButton = $(".submit-button");
+var $searchBar = $(".search-bar");
 
+
+
+$inputTitle.keyup(toggleButton);
+$inputBody.keyup(toggleButton);
 $submitButton.on('click', addItemToList);
 //**5 (pt.1of2-pt is #6 below)button toggle active/non (comment deletes and moves up)
-//.$inputTitle.on('keyup'. toggleButton);
-//.$inputBody.on('keyup'. toggleButton);
 
 
+
+function toggleButton() {
+  if ($inputTitle.val() === '' || $inputBody.val() === '') {
+    $submitButton.prop( "disabled", true);
+  } else {
+    $submitButton.prop( "disabled", false);
+  }
+}
 
 function addItemToList(event) {
   event.preventDefault();
-  console.log($inputTitle.val(), $inputBody.val());
+  var $ideaCardList = $('.info-from-inputs');
+  $ideaCardList.prepend(`
+    <article>
+      <h2 class="output-title">${$inputTitle.val()}</h2>
+        <button class="delete-button"></button>
+        <br>
+        <p class="output-body">${$inputBody.val()}</p>
+        <form>
+          <button class="upvote-button"></button>
+          <button class="downvote-button"></button>
+          <h3>quality:</h3>
+          <select class="quality-selector" name="quality">
+            <option value="swill" selected>swill</option>
+            <option value="plausible">plausible</option>
+            <option value="genius">genius</option>
+          </select>
+        </form>
+    </article>
+  `);
+  clearInputs();
+  toggleButton();
 }
-//**1.the two var below go into function above when working
-//var title = (.$inputTitle.val());
-//var body = (.$inputBody.val());
 
-//**2.add item to output; goes into function above
-//var $outputBody = $('.output-body');
-//$outputBody.prepend('
-//<p>$(title) $(body)</p>
-//');
 
-//**3.final part of function above
-//clearInputs()
 
-//**4. New function to clear inputs
-//function clearInputs() {
-//  $itemTitle.val('');
-// $inputBody.val('');
-//}
 
-//6.for pt.2of2 for button active/non sction (20.09on video..)
-//function toggleButton() {
-//  if ($inputTitle.val() === '' || $inputBody.val( === (''))) {
-//  console.log('yup');
-//  } else {
-//    console.log('naw');
-//  }
-//}
+
+
+
+
+
+function clearInputs() {
+  $inputTitle.val('');
+  $inputBody.val('');
+}
+
