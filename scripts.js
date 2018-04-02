@@ -3,6 +3,7 @@ var $inputTitle = $(".input-title");
 var $inputBody = $(".input-body");
 var $submitButton = $(".submit-button");
 var $searchBar = $(".search-bar");
+var $uniqueId = Date.now()
 
 
 $inputTitle.keyup(toggleButton);
@@ -20,13 +21,14 @@ function toggleButton() {
 
 function addItemToList(event) {
   event.preventDefault();
+  $uniqueId;
   var $ideaCardList = $('.info-from-inputs');
   $ideaCardList.prepend(`
-    <article id=${Date.now()}>
-      <h2 class="output-title">${$inputTitle.val()}</h2>
+    <article id=${$uniqueId}>
+      <h2 class="output-title" contenteditable="true">${$inputTitle.val()}</h2>
         <button class="delete-button"></button>
         <br>
-        <p class="output-body">${$inputBody.val()}</p>
+        <p class="output-body" contenteditable="true">${$inputBody.val()}</p>
         <form>
           <button class="upvote-button"></button>
           <button class="downvote-button"></button>
@@ -39,13 +41,25 @@ function addItemToList(event) {
         </form>
     </article>
   `);
+  BoxIdea();
   clearInputs();
   toggleButton();
 }
-
 
 function clearInputs() {
   $inputTitle.val('');
   $inputBody.val('');
 }
 
+// function BoxIdea(title, body) {
+//   this.title = title;
+//   this.body = body;
+//   this.quality = 'normal';
+//   this.id = Date.now();
+// }
+
+// var $ideaBox = new function BoxIdea($inputTitle.val(), $inputBody.val() {
+//   var $articleToStore = { id:$uniqueId, h2:$inputTitle.val(), p:$inputBody.val()};
+//   var $stringifiedArticle = JSON.stringify($articleToStore);
+//   localStorage.setItem('$articleToStore.$uniqueId', $stringifiedArticle);
+// }
