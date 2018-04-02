@@ -3,12 +3,14 @@ var $inputTitle = $(".input-title");
 var $inputBody = $(".input-body");
 var $submitButton = $(".submit-button");
 var $searchBar = $(".search-bar");
-var $uniqueId = Date.now()
-
+var $outputTitle = $(".output-title");
+var $outputBody = $(".output-body");
+var title = $outputTitle.val();
+var body = $outputBody.val();
 
 $inputTitle.keyup(toggleButton);
 $inputBody.keyup(toggleButton);
-$submitButton.on('click', addItemToList);
+$submitButton.on('click', createIdea);
 
 
 function toggleButton() {
@@ -18,17 +20,31 @@ function toggleButton() {
     $submitButton.prop( "disabled", false);
   }
 }
+function BoxIdea(title, body) {
+  this.title = title;
+  this.body = body;
+  this.quality = 'normal';
+  this.id = Date.now();
+}
 
-function addItemToList(event) {
+function createIdea(event) {
   event.preventDefault();
-  $uniqueId;
+  title = $inputTitle.val();
+  body = $inputBody.val();
+  var newIdea = new BoxIdea(title, body);
+  prependCards(newIdea);
+  storeMyIdea(newIdea);
+  }
+  
+function prependCards(newIdea) {
+  console.log(newIdea.title);
   var $ideaCardList = $('.info-from-inputs');
   $ideaCardList.prepend(`
-    <article id=${$uniqueId}>
-      <h2 class="output-title" contenteditable="true">${$inputTitle.val()}</h2>
+    <article>
+      <h2 class="output-title" contenteditable="true">${newIdea.title}</h2>
         <button class="delete-button"></button>
         <br>
-        <p class="output-body" contenteditable="true">${$inputBody.val()}</p>
+        <p class="output-body" contenteditable="true">${newIdea.body}</p>
         <form>
           <button class="upvote-button"></button>
           <button class="downvote-button"></button>
@@ -41,7 +57,6 @@ function addItemToList(event) {
         </form>
     </article>
   `);
-  BoxIdea();
   clearInputs();
   toggleButton();
 }
@@ -51,15 +66,20 @@ function clearInputs() {
   $inputBody.val('');
 }
 
-// function BoxIdea(title, body) {
-//   this.title = title;
-//   this.body = body;
-//   this.quality = 'normal';
-//   this.id = Date.now();
-// }
 
-// var $ideaBox = new function BoxIdea($inputTitle.val(), $inputBody.val() {
-//   var $articleToStore = { id:$uniqueId, h2:$inputTitle.val(), p:$inputBody.val()};
-//   var $stringifiedArticle = JSON.stringify($articleToStore);
-//   localStorage.setItem('$articleToStore.$uniqueId', $stringifiedArticle);
+ function storeMyIdea(newIdea) {
+  var $articleToStore = { 'id': newIdea.id, 'title': newIdea.title, 'body':newIdea.body};
+  var $stringifiedArticle = JSON.stringify($articleToStore);
+  localStorage.setItem('$articleToStore.$uniqueId', $stringifiedArticle);
+}
+
+// FOR LOOP & PARSE TOGETHER
+// var puppies = [{name: "Fido", numLegs: 4}, {name: "Greg", numLegs: 5}]
+// for( var i = 0; i < puppies.length; i++) {
+//     puppies[0].numLegs
 // }
+// 4
+// for( var i = 0; i < puppies.length; i++) {
+//     puppies[1].numLegs
+// } 
+// 5
