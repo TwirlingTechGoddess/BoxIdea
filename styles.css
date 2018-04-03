@@ -60,6 +60,10 @@ input::placeholder {
   margin: 1rem auto;
 }
 
+.submit-button:hover {
+  background-color: #045e55;
+}
+
 /*----------card append section-------*/
 main {
   position: relative;
@@ -111,16 +115,36 @@ p {
   background-image: url('images/delete.svg');
 }
 
+.delete-button:hover {
+  background-image: url('images/delete-hover.svg');
+}
+
 .upvote-button {
   float: left;
   background-image: url('images/upvote.svg');
   margin-right: 1.5rem;
 }
 
+.upvote-button:hover {
+  background-image: url('images/upvote-hover.svg');
+}
+
+.upvote-button:focus {  
+  background-image: url('images/upvote-hover.svg');
+}
+
 .downvote-button {
   float: left;
   background-image: url('images/downvote.svg');
   margin-right: 1.5rem;
+}
+
+.downvote-button:hover {
+  background-image: url('images/downvote-hover.svg');
+}
+
+.downvote-button:focus {  
+  background-image: url('images/downvote-hover.svg');
 }
 
 h3 {
