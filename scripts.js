@@ -6,10 +6,15 @@ var $outputTitle = $(".output-title");
 var $outputBody = $(".output-body");
 var title = $outputTitle.val();
 var body = $outputBody.val();
+var $upVote = $('.upvote-button');
+var $downVote = $('.downvote-button');
+
 
 $inputTitle.keyup(toggleButton);
 $inputBody.keyup(toggleButton);
 $submitButton.on('click', createIdea);
+$('main').on('click', deleteIdea);
+
 
 
 function toggleButton() {
@@ -66,7 +71,6 @@ function clearInputs() {
 function storeMyIdea(newIdea) {
   var stringifiedIdea = JSON.stringify(newIdea);
   localStorage.setItem(newIdea.id, stringifiedIdea);
-// retrieveDataFromStorage(localStorage.key(newIdea[i])); 
 }
 
 retrieveDataFromStorage();
@@ -80,5 +84,10 @@ function retrieveDataFromStorage(idea) {
   }
 }
 
-// } 
-// 5
+function deleteIdea(event) {
+  event.preventDefault();
+  $(event.target).closest('article').remove();
+  console.log('leeLee');
+  debugger;
+}
+  // localStorage.removeItem(localStorage.key(event));
