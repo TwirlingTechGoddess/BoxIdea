@@ -1,6 +1,3 @@
-@media screen {
-  
-}
 
 /*-------full page settings-------*/
 body {
@@ -70,8 +67,8 @@ input::placeholder {
 
 /*----------card append section-------*/
 main {
-  position: relative;
-  height: 50vh;
+  position: fixed;
+  height: 40vh;
   width: 100%;
   overflow: scroll;
 }
@@ -84,7 +81,7 @@ main {
 /*-----------idea cards-----------*/
 article {
   position: relative;
-  height: 12rem;
+  height: 11rem;
   width: 62%;
   margin: 1.5rem auto;
   padding-bottom: .2rem;
@@ -96,22 +93,26 @@ h2 {
   font-family: 'Roboto Slab', serif;
   font-size: xx-large;
   color: #6D6E71;
+
 }
 
 article button {
   height: 2rem;
   width: 2rem;
   border: none;
+  background-color: transparent;
 }
 
 p {
-  width: 90%;
+  position: relative;
+  height: 50%;
+  width: 100%;
   text-align: left;
   font-size: x-large;
-  line-height: 1.8rem;
+  line-height: 1.75rem;
   color: #939598;
-  padding: .75rem 0;
-  overflow-wrap: break-word;
+  margin: 1.5rem 0 -2.9rem 0;
+  overflow: scroll;
 }
 
 .delete-button {
@@ -121,6 +122,10 @@ p {
 
 .delete-button:hover {
   background-image: url('images/delete-hover.svg');
+}
+
+form {
+  height: 3rem;
 }
 
 .upvote-button {
@@ -171,5 +176,72 @@ select {
 }
 
 select::-ms-expand {
-    display: none;
+  display: none;
+}
+
+/*-----------queiry ---------*/
+@media screen and (max-width: 415px) {
+  
+  section {
+    height: 49vh;
+    padding: 1rem 0 0 0;
+  }
+
+  h1 {
+    height: 3rem;   
+    font-size: 2rem;
+    padding-top: 1.25rem;
+  }
+
+  input {
+    width: 83%;
+    font-size: x-large;
+    padding-left: .75rem;
+    margin: .5rem 0 .25rem 0;
+  }
+
+  .input-title {
+    height: 1.75rem;
+  }
+
+  .input-body {
+    height: 5.75rem;
+  }
+
+  .submit-button {
+    width: 87.5%;
+    height: 2.2rem;
+  }
+
+  .search-bar {
+    width: 87.5%;
+    height: 2rem;
+  }
+
+  article {
+    width: 83%;
+    margin: .5rem auto;
+    padding-bottom: 0;
+  }
+
+  h2 {
+    font-size: x-large;
+  }
+
+  p {
+    font-size: large;
+  }
+
+  article button {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  h3 {
+    font-size: medium;
+  }
+
+  select {
+    font-size: medium;
+  }
 }
