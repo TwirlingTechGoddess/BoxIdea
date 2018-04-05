@@ -67,7 +67,7 @@ input::placeholder {
 /*----------card append section-------*/
 main {
   position: fixed;
-  height: 50vh;
+  height: 40vh;
   width: 100%;
   overflow: scroll;
 }
@@ -96,10 +96,10 @@ h2 {
 }
 
 article button {
-
   height: 2rem;
   width: 2rem;
   border: none;
+  background-color: transparent;
 }
 
 p {
@@ -121,6 +121,10 @@ p {
 
 .delete-button:hover {
   background-image: url('images/delete-hover.svg');
+}
+
+form {
+  height: 3rem;
 }
 
 .upvote-button {
@@ -173,3 +177,73 @@ select {
 select::-ms-expand {
     display: none;
 }
+
+
+
+
+/*-----------queiry ---------*/
+@media screen and (max-width: 415px) {
+  
+
+  section {
+    height: 49vh;
+    padding: 1rem 0 0 0;
+  }
+
+  h1 {
+  height: 3rem;   
+  font-size: 2rem;
+  padding-top: 1.25rem;
+}
+
+  input {
+  width: 83%;
+  font-size: x-large;
+  padding-left: .75rem;
+  margin: .5rem 0 .25rem 0;
+}
+
+  .input-title {
+    height: 1.75rem;
+}
+
+  .input-body {
+    height: 5.75rem;
+}
+
+  .submit-button {
+    width: 87.5%;
+    height: 2.2rem;
+}
+
+  .search-bar {
+    width: 87.5%;
+    height: 2rem;
+}
+
+  article {
+    width: 83%;
+    margin: .5rem auto;
+    padding-bottom: 0;
+  }
+
+  h2 {
+    font-size: x-large;
+}
+
+  p {
+    font-size: large;
+  }
+
+  article button {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+  h3 {
+    font-size: medium;
+  }
+
+  select {
+    font-size: medium;
+  }
