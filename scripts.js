@@ -14,6 +14,9 @@ $inputTitle.keyup(toggleButton);
 $inputBody.keyup(toggleButton);
 $submitButton.on('click', createIdea);
 $('main').on('click', '.delete-button', deleteIdea);
+$('main').on('click', $upVote, upVoteQuality);
+// $('main').on('click', $downVote, downVoteQuality);
+
 
 
 
@@ -86,15 +89,34 @@ function retrieveDataFromStorage(newIdea) {
 
 function deleteIdea(event) {
   event.preventDefault();
+  $(event.target) === $('delete-button');
   var keysOmine = $(event.target).parent('article').attr("id");
   localStorage.removeItem(keysOmine); 
   $(event.target).parent('article').remove();
 };
 
 
-  // return $('article').attr("id");
-  // console.log($('article').attr("id"));
-
-
-
-
+function upVoteQuality(event) {
+  event.preventDefault();
+  $(event.target) === $upVote;
+  var qualityBox = $(event.target).siblings('select');
+  var selectBubble = qualityBox.children('option');
+ var capturedId = $(event.target).parent().parent().attr("id");
+ var storedId = localStorage.getItem(capturedId);
+ var parsedId = JSON.parse(storedId);
+  if (selectBubble[0].selected === true) {
+    selectBubble[0].selected = false;
+    selectBubble[1].selected = true;
+    parsedId.quality = "plausible";
+  } else if(selectBubble[1].selected === true) {
+    selectBubble[1].selected = false;
+    selectBubble[2].selected = true;
+    parsedId.quality = "genius";
+  }
+  var stringifyQuality = JSON.stringify(parsedId);
+  localStorage.setItem(capturedId, stringifyQuality);
+  var storedId = localStorage.getItem(capturedId);
+  var parsedId = JSON.parse(storedId);
+  selectBubble.text = parsedId.quality
+  debugger;
+}
