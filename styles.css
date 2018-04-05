@@ -1,3 +1,4 @@
+
 /*-------full page settings-------*/
 body {
   font-family: 'open sans', sans-serif;
@@ -175,51 +176,47 @@ select {
 }
 
 select::-ms-expand {
-    display: none;
+  display: none;
 }
-
-
-
 
 /*-----------queiry ---------*/
 @media screen and (max-width: 415px) {
   
-
   section {
     height: 49vh;
     padding: 1rem 0 0 0;
   }
 
   h1 {
-  height: 3rem;   
-  font-size: 2rem;
-  padding-top: 1.25rem;
-}
+    height: 3rem;   
+    font-size: 2rem;
+    padding-top: 1.25rem;
+  }
 
   input {
-  width: 83%;
-  font-size: x-large;
-  padding-left: .75rem;
-  margin: .5rem 0 .25rem 0;
-}
+    width: 83%;
+    font-size: x-large;
+    padding-left: .75rem;
+    margin: .5rem 0 .25rem 0;
+  }
 
   .input-title {
     height: 1.75rem;
-}
+  }
 
   .input-body {
     height: 5.75rem;
-}
+  }
 
   .submit-button {
     width: 87.5%;
     height: 2.2rem;
-}
+  }
 
   .search-bar {
     width: 87.5%;
     height: 2rem;
-}
+  }
 
   article {
     width: 83%;
@@ -229,7 +226,7 @@ select::-ms-expand {
 
   h2 {
     font-size: x-large;
-}
+  }
 
   p {
     font-size: large;
@@ -238,7 +235,7 @@ select::-ms-expand {
   article button {
     height: 1.5rem;
     width: 1.5rem;
-}
+  }
 
   h3 {
     font-size: medium;
@@ -247,3 +244,4 @@ select::-ms-expand {
   select {
     font-size: medium;
   }
+}
